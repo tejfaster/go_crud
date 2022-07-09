@@ -59,11 +59,11 @@ func deleteAlbumsByID(c *gin.Context) {
 }
 
 func main() {
-	// router := gin.Default()
-	// router.SetTrustedProxies([]string{"192.168.1.2"})
-	// router.GET("/albums", getAlbums)
-	// router.POST("/albums",createAlbum)
-	// router.GET("/albums/:id",getAlumsByID)
-	// router.DELETE("/albums/:id",deleteAlbumsByID)
-	// router.Run("localhost:8081")
+	router := gin.Default()
+	router.SetTrustedProxies([]string{"192.168.1.2"})
+	router.GET("/albums", getAlbums)
+	router.POST("/albums",createAlbum)
+	router.GET("/albums/:id",getAlumsByID)
+	router.DELETE("/albums/:id",deleteAlbumsByID)
+	router.Run("localhost:8081")
 }
